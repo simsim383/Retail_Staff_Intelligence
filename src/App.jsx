@@ -3,8 +3,8 @@ import {
   CheckCircle, BarChart2, Clock, Users, Download,
   AlertTriangle, ArrowRight, Menu, X, TrendingUp,
   ClipboardList, Bell, Store, ShoppingBag,
-  Coffee, Package, Activity, Calendar,
-  Star, Eye, Cpu, Lock
+  Coffee, Package,
+  Star, Eye
 } from "lucide-react";
 
 const C = {
@@ -192,7 +192,7 @@ export default function App(){
             task tracking, staff productivity, and shift insights in one simple dashboard.
           </p>
           <div className="fu d3" style={{display:"flex",flexWrap:"wrap",justifyContent:"center",gap:8,marginBottom:36}}>
-            {["Track staff tasks in real time","Monitor store from anywhere","Export hours for payroll instantly"].map(b=>(
+            {["Know what staff actually did during their shift","Spot slow or inefficient tasks instantly","Prepare payroll in seconds — no spreadsheets"].map(b=>(
               <span key={b} style={{display:"inline-flex",alignItems:"center",gap:6,fontSize:12,fontWeight:600,padding:"7px 14px",borderRadius:99,background:`${C.green}14`,color:C.green,border:`1px solid ${C.green}28`}}>
                 <CheckCircle size={11} strokeWidth={3}/> {b}
               </span>
@@ -364,7 +364,7 @@ export default function App(){
               },
               {n:"03",color:C.green,title:"Insights you can act on",desc:"Weekly summaries, payroll exports, and performance trends. Delivered automatically so you can make decisions, not spreadsheets.",
                 preview:<div style={{marginTop:16,borderRadius:12,overflow:"hidden",border:`1px solid ${C.border}`}}>
-                  {[{l:"Week total hours",v:"314h",c:C.amber},{l:"Labour efficiency",v:"↑ 8%",c:C.green},{l:"Tasks completed",v:"148/160",c:C.blue},{l:"Payroll ready",v:"✓ Export",c:C.green}].map((r,i)=>(
+                  {[{l:"Week total hours",v:"314h",c:C.amber},{l:"Tasks completed",v:"148/160",c:C.blue},{l:"Shifts submitted",v:"7 / 7",c:C.green},{l:"Payroll ready",v:"✓ Export",c:C.green}].map((r,i)=>(
                     <div key={i} style={{background:C.bg,display:"flex",justifyContent:"space-between",padding:"8px 14px",borderBottom:i<3?`1px solid ${C.border}`:"none"}}>
                       <span style={{fontSize:11,color:C.dim}}>{r.l}</span><span style={{fontSize:11,fontWeight:800,color:r.c}}>{r.v}</span>
                     </div>
@@ -457,33 +457,6 @@ export default function App(){
         </div>
       </div>
 
-      {/* ROADMAP */}
-      <div style={{padding:"88px 20px"}}>
-        <div style={{maxWidth:1100,margin:"0 auto"}}>
-          <div style={{textAlign:"center",marginBottom:48}}>
-            <Badge color={C.blue}>Coming Soon</Badge>
-            <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(1.8rem,3.5vw,2.8rem)",fontWeight:800,lineHeight:1.15,color:C.text,marginTop:20,marginBottom:12}}>The future of Retail Intelligence.</h2>
-            <p style={{...BODY,maxWidth:400,margin:"0 auto"}}>We're building fast. Here's what's coming next.</p>
-          </div>
-          <div className="g5" style={{display:"grid",gridTemplateColumns:"repeat(5,1fr)",gap:14}}>
-            {[{icon:Calendar,label:"Shift scheduling",eta:"Q2 2026"},
-              {icon:TrendingUp,label:"Labour vs revenue insights",eta:"Q2 2026"},
-              {icon:Cpu,label:"POS integrations",eta:"Q3 2026"},
-              {icon:Activity,label:"Automated weekly reports",eta:"Q3 2026"},
-              {icon:Lock,label:"Incident logging + photos",eta:"Q3 2026"}
-            ].map((r,i)=>(
-              <Card key={i} accent={C.blue} style={{padding:20,textAlign:"center"}}>
-                <div style={{width:38,height:38,borderRadius:12,background:`${C.blue}18`,display:"flex",alignItems:"center",justifyContent:"center",margin:"0 auto 12px"}}>
-                  <r.icon size={16} color={C.blue}/>
-                </div>
-                <div style={{fontSize:12,fontWeight:700,color:C.text,lineHeight:1.4,marginBottom:8}}>{r.label}</div>
-                <Badge color={C.blue}>{r.eta}</Badge>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* FOUNDER */}
       <div style={{background:C.surface,borderTop:`1px solid ${C.border}`,borderBottom:`1px solid ${C.border}`,padding:"72px 20px"}}>
         <div style={{maxWidth:700,margin:"0 auto",textAlign:"center"}}>
@@ -492,7 +465,16 @@ export default function App(){
             "Most shop owners have no idea what actually happens during a shift."
           </h2>
           <p style={{...BODY,marginBottom:16}}>Small retail stores are often running on trust, habit, and hope. Owners rely on word of mouth and memory to understand how their store is operating. When something goes wrong — a task missed, hours disputed, a customer complaint — there's no record.</p>
-          <p style={BODY}>Retail Intelligence was built to change that. Not with complex, expensive enterprise software — but with a simple, practical tool that gives store owners the visibility they deserve.</p>
+          <p style={{...BODY,marginBottom:24}}>Retail Intelligence was built to change that. Not with complex, expensive enterprise software — but with a simple, practical tool that gives store owners the visibility they deserve.</p>
+          <div style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:16,padding:"18px 20px",marginBottom:24,textAlign:"left"}}>
+            <div style={{fontSize:11,fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",color:C.dim,marginBottom:10}}>Built using real store workflows</div>
+            <p style={{fontSize:13,color:C.muted,lineHeight:1.7,marginBottom:12}}>Retail Intelligence was designed around the actual daily tasks of real convenience stores — not invented in a boardroom. The task lists, categories, and shift structures are based on what real shop staff do every day.</p>
+            <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
+              {["Till lifts","Fridge date checks","Newspaper returns","Stock rotation","Post office duties","Opening & closing","Grocery stacking","Cleaning tasks"].map(t=>(
+                <span key={t} style={{fontSize:11,fontWeight:700,padding:"4px 10px",borderRadius:99,background:`${C.amber}14`,color:C.amber,border:`1px solid ${C.amber}25`}}>{t}</span>
+              ))}
+            </div>
+          </div>
           <div style={{display:"inline-flex",alignItems:"center",gap:12,marginTop:28,background:C.card,border:`1px solid ${C.border}`,borderRadius:14,padding:"12px 18px"}}>
             <div style={{width:34,height:34,borderRadius:"50%",background:`linear-gradient(135deg,${C.amber},#f97316)`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,fontWeight:800,color:"#000"}}>RI</div>
             <div style={{textAlign:"left"}}>
