@@ -82,7 +82,7 @@ function Badge({children,color=C.amber}){
 }
 
 // Mini phone mockup component
-function PhoneMock({children, title="ShiftIQ", subtitle="Owner Dashboard"}){
+function PhoneMock({children, title="Retail Intelligence", subtitle="Owner Dashboard"}){
   return(
     <div style={{width:240,background:C.card,borderRadius:32,border:`1.5px solid ${C.border}`,
       overflow:"hidden",boxShadow:`0 40px 80px rgba(0,0,0,0.6), 0 0 60px ${C.amber}10`,margin:"0 auto"}}>
@@ -140,6 +140,7 @@ export default function App(){
     {label:"Staff App",id:"staff"},
     {label:"Multi-Site",id:"multibiz"},
     {label:"Features",id:"features"},
+    {label:"Pricing",id:"pricing"},
     {label:"Contact",id:"contact"}
   ];
 
@@ -181,7 +182,7 @@ export default function App(){
             <div style={{width:32,height:32,borderRadius:10,background:`linear-gradient(135deg,${C.amber},#f97316)`,display:"flex",alignItems:"center",justifyContent:"center"}}>
               <Store size={15} color="#000" strokeWidth={2.5}/>
             </div>
-            <span style={{fontWeight:700,fontSize:15,color:C.text}}>Shift<span style={{color:C.amber}}>IQ</span></span>
+            <span style={{fontWeight:700,fontSize:15,color:C.text}}>Retail <span style={{color:C.amber}}>Intelligence</span></span>
           </div>
           <div className="hm" style={{display:"flex",gap:32}}>
             {navLinks.map(l=>(
@@ -250,7 +251,7 @@ export default function App(){
                   <div style={{display:"flex",gap:6}}>
                     {["#FF5F57","#FEBC2E","#28C840"].map(c=><div key={c} style={{width:12,height:12,borderRadius:"50%",background:c}}/>)}
                   </div>
-                  <span style={{fontSize:12,fontWeight:600,color:C.dim}}>ShiftIQ — Owner Dashboard · Londis Horden</span>
+                  <span style={{fontSize:12,fontWeight:600,color:C.dim}}>Retail Intelligence — Owner Dashboard · Londis Horden</span>
                 </div>
                 <div style={{display:"flex",alignItems:"center",gap:6,fontSize:11,fontWeight:700,color:C.green,background:`${C.green}15`,padding:"4px 10px",borderRadius:99}}>
                   <div style={{width:6,height:6,borderRadius:"50%",background:C.green}}/> Live
@@ -557,7 +558,7 @@ export default function App(){
               </PhoneMock>
 
               {/* PIN login phone */}
-              <PhoneMock title="ShiftIQ" subtitle="Sign In">
+              <PhoneMock title="Retail Intelligence" subtitle="Sign In">
                 <div style={{textAlign:"center",padding:"8px 0 12px"}}>
                   <div style={{fontFamily:"'Playfair Display',serif",fontSize:14,fontWeight:700,color:C.text,marginBottom:4}}>Enter your PIN</div>
                   <div style={{fontSize:11,color:C.dim,marginBottom:14}}>Londis Horden</div>
@@ -704,7 +705,7 @@ export default function App(){
             <div>
               <Badge color={C.amber}>Who It's For</Badge>
               <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(1.8rem,3.5vw,2.8rem)",fontWeight:800,lineHeight:1.15,color:C.text,margin:"20px 0 16px"}}>Built for real<br/>retail stores.</h2>
-              <p style={{...BODY,marginBottom:28}}>ShiftIQ was built for the shop owners doing everything themselves — managing staff, covering shifts, handling payroll, and trying to grow their business at the same time.</p>
+              <p style={{...BODY,marginBottom:28}}>Retail Intelligence was built for the shop owners doing everything themselves — managing staff, covering shifts, handling payroll, and trying to grow their business at the same time.</p>
               <div className="g2" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
                 {[{icon:Store,label:"Convenience Stores"},{icon:ShoppingBag,label:"Supermarkets"},{icon:Package,label:"Off-licences"},{icon:Coffee,label:"Independent Shops"}].map((s,i)=>(
                   <div key={i} style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:12,padding:"12px 14px",display:"flex",alignItems:"center",gap:10}}>
@@ -750,10 +751,10 @@ export default function App(){
             "Most shop owners have no idea<br/>what actually happens during a shift."
           </h2>
           <p style={{...BODY,marginBottom:16}}>Small retail stores are often running on trust, habit, and hope. Owners rely on word of mouth and memory to understand how their store is operating. When something goes wrong — a task missed, hours disputed, a customer complaint — there's no record.</p>
-          <p style={{...BODY,marginBottom:24}}>ShiftIQ was built to change that. Not with complex, expensive enterprise software — but with a simple, practical tool that gives store owners the visibility they deserve.</p>
+          <p style={{...BODY,marginBottom:24}}>Retail Intelligence was built to change that. Not with complex, expensive enterprise software — but with a simple, practical tool that gives store owners the visibility they deserve.</p>
           <div style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:16,padding:"18px 20px",marginBottom:24,textAlign:"left"}}>
             <div style={{fontSize:11,fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",color:C.dim,marginBottom:10}}>Built around real store workflows</div>
-            <p style={{fontSize:13,color:C.muted,lineHeight:1.7,marginBottom:12}}>ShiftIQ was designed around the actual daily tasks of real convenience stores — not invented in a boardroom. The task lists, categories, and shift structures reflect what real shop staff do every day.</p>
+            <p style={{fontSize:13,color:C.muted,lineHeight:1.7,marginBottom:12}}>Retail Intelligence was designed around the actual daily tasks of real convenience stores — not invented in a boardroom. The task lists, categories, and shift structures reflect what real shop staff do every day.</p>
             <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
               {["Till lifts","Fridge date checks","Newspaper returns","Stock rotation","Post office duties","Opening & closing","Grocery stacking","Cleaning tasks"].map(t=>(
                 <span key={t} style={{fontSize:11,fontWeight:700,padding:"4px 10px",borderRadius:99,background:`${C.amber}14`,color:C.amber,border:`1px solid ${C.amber}25`}}>{t}</span>
@@ -761,11 +762,132 @@ export default function App(){
             </div>
           </div>
           <div style={{display:"inline-flex",alignItems:"center",gap:12,marginTop:28,background:C.card,border:`1px solid ${C.border}`,borderRadius:14,padding:"12px 18px"}}>
-            <div style={{width:34,height:34,borderRadius:"50%",background:`linear-gradient(135deg,${C.amber},#f97316)`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,fontWeight:800,color:"#000"}}>SQ</div>
+            <div style={{width:34,height:34,borderRadius:"50%",background:`linear-gradient(135deg,${C.amber},#f97316)`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,fontWeight:800,color:"#000"}}>RI</div>
             <div style={{textAlign:"left"}}>
-              <div style={{fontSize:13,fontWeight:800,color:C.text}}>ShiftIQ</div>
+              <div style={{fontSize:13,fontWeight:800,color:C.text}}>Retail Intelligence</div>
               <div style={{fontSize:11,color:C.dim}}>Built in the UK for UK retailers</div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── PRICING ── */}
+      <div id="pricing" style={{padding:"88px 20px",background:C.bg}}>
+        <div style={{maxWidth:1100,margin:"0 auto"}}>
+          <div style={{textAlign:"center",marginBottom:52}}>
+            <Badge color={C.amber}>Pricing</Badge>
+            <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(1.8rem,3.5vw,2.8rem)",fontWeight:800,lineHeight:1.15,color:C.text,margin:"20px 0 12px"}}>
+              Simple pricing.<br/>No surprises.
+            </h2>
+            <p style={{...BODY,maxWidth:400,margin:"0 auto"}}>Pay monthly. Cancel anytime. No setup fees, no contracts, no hidden costs.</p>
+          </div>
+
+          <div className="g2" style={{display:"grid",gridTemplateColumns:"repeat(2,1fr)",gap:20,maxWidth:780,margin:"0 auto"}}>
+
+            {/* BASIC */}
+            <div style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:20,padding:36,
+              transition:"all 0.25s ease",position:"relative"}}
+              onMouseEnter={e=>{e.currentTarget.style.borderColor=`${C.amber}55`;e.currentTarget.style.transform="translateY(-3px)";e.currentTarget.style.boxShadow=`0 0 30px ${C.amber}18,0 8px 32px rgba(0,0,0,0.4)`;}}
+              onMouseLeave={e=>{e.currentTarget.style.borderColor=C.border;e.currentTarget.style.transform="none";e.currentTarget.style.boxShadow="none";}}>
+              <div style={{...LBL,marginBottom:12}}>Basic</div>
+              <div style={{display:"flex",alignItems:"flex-end",gap:4,marginBottom:4}}>
+                <span style={{fontFamily:"'Playfair Display',serif",fontSize:52,fontWeight:800,color:C.text,lineHeight:1}}>£5</span>
+                <span style={{fontFamily:"'Playfair Display',serif",fontSize:28,fontWeight:800,color:C.amber,lineHeight:1,marginBottom:4}}>.99</span>
+              </div>
+              <div style={{fontSize:13,color:C.dim,marginBottom:28}}>per month · single business</div>
+              <div style={{display:"flex",flexDirection:"column",gap:11,marginBottom:32}}>
+                {[
+                  {on:true, txt:"1 business"},
+                  {on:true, txt:"Unlimited staff members"},
+                  {on:true, txt:"Staff PIN app"},
+                  {on:true, txt:"Task tracking & time logs"},
+                  {on:true, txt:"Owner dashboard"},
+                  {on:true, txt:"Shift scheduling & task lists"},
+                  {on:true, txt:"Incident reporting"},
+                  {on:true, txt:"Payroll export"},
+                  {on:false,txt:"Multi-business management"},
+                  {on:false,txt:"Cross-business comparison"},
+                ].map((f,i)=>(
+                  <div key={i} style={{display:"flex",alignItems:"center",gap:10,fontSize:13,
+                    color:f.on?C.muted:C.dim,opacity:f.on?1:0.5}}>
+                    <div style={{width:17,height:17,borderRadius:"50%",flexShrink:0,
+                      background:f.on?`${C.green}18`:C.border,
+                      display:"flex",alignItems:"center",justifyContent:"center"}}>
+                      {f.on
+                        ? <CheckCircle size={10} color={C.green} strokeWidth={3}/>
+                        : <X size={9} color={C.dim} strokeWidth={3}/>
+                      }
+                    </div>
+                    {f.txt}
+                  </div>
+                ))}
+              </div>
+              <button onClick={()=>document.getElementById("contact")?.scrollIntoView({behavior:"smooth"})}
+                style={{...BTNS,width:"100%",justifyContent:"center",padding:14,fontSize:14,borderRadius:12}}>
+                Get Started <ArrowRight size={13} strokeWidth={3}/>
+              </button>
+            </div>
+
+            {/* PRO */}
+            <div style={{background:`linear-gradient(160deg,${C.amber}0A 0%,${C.card} 50%)`,
+              border:`1px solid ${C.amber}`,borderRadius:20,padding:36,
+              transition:"all 0.25s ease",position:"relative",
+              boxShadow:`0 0 40px ${C.amber}15`}}
+              onMouseEnter={e=>{e.currentTarget.style.transform="translateY(-3px)";e.currentTarget.style.boxShadow=`0 0 50px ${C.amber}25,0 8px 32px rgba(0,0,0,0.4)`;}}
+              onMouseLeave={e=>{e.currentTarget.style.transform="none";e.currentTarget.style.boxShadow=`0 0 40px ${C.amber}15`;}}>
+
+              {/* Most Popular badge */}
+              <div style={{position:"absolute",top:-14,left:"50%",transform:"translateX(-50%)",
+                background:`linear-gradient(135deg,${C.amber},#f97316)`,color:"#000",
+                fontSize:11,fontWeight:800,letterSpacing:"0.08em",textTransform:"uppercase",
+                padding:"5px 18px",borderRadius:99,whiteSpace:"nowrap",fontFamily:"'Sora',sans-serif"}}>
+                Most Popular
+              </div>
+
+              <div style={{...LBL,marginBottom:12,color:C.amber}}>Pro</div>
+              <div style={{display:"flex",alignItems:"flex-end",gap:4,marginBottom:4}}>
+                <span style={{fontFamily:"'Playfair Display',serif",fontSize:52,fontWeight:800,color:C.text,lineHeight:1}}>£9</span>
+                <span style={{fontFamily:"'Playfair Display',serif",fontSize:28,fontWeight:800,color:C.amber,lineHeight:1,marginBottom:4}}>.99</span>
+              </div>
+              <div style={{fontSize:13,color:C.dim,marginBottom:28}}>per month · multiple businesses</div>
+              <div style={{display:"flex",flexDirection:"column",gap:11,marginBottom:32}}>
+                {[
+                  {txt:"Everything in Basic"},
+                  {txt:"Unlimited businesses"},
+                  {txt:"Unlimited staff members"},
+                  {txt:"Staff PIN app"},
+                  {txt:"Task tracking & time logs"},
+                  {txt:"Owner dashboard"},
+                  {txt:"Shift scheduling & task lists"},
+                  {txt:"Incident reporting"},
+                  {txt:"Payroll export"},
+                  {txt:"Multi-business management"},
+                  {txt:"Cross-business comparison"},
+                ].map((f,i)=>(
+                  <div key={i} style={{display:"flex",alignItems:"center",gap:10,fontSize:13,color:C.muted}}>
+                    <div style={{width:17,height:17,borderRadius:"50%",flexShrink:0,
+                      background:`${C.amber}18`,display:"flex",alignItems:"center",justifyContent:"center"}}>
+                      <CheckCircle size={10} color={C.amber} strokeWidth={3}/>
+                    </div>
+                    {i===0?<strong style={{color:C.text}}>{f.txt}</strong>:f.txt}
+                  </div>
+                ))}
+              </div>
+              <button onClick={()=>document.getElementById("contact")?.scrollIntoView({behavior:"smooth"})}
+                style={{...BTNP,width:"100%",justifyContent:"center",padding:14,fontSize:14,borderRadius:12,
+                  boxShadow:`0 0 24px ${C.amber}35`}}>
+                Get Started <ArrowRight size={13} strokeWidth={3}/>
+              </button>
+            </div>
+          </div>
+
+          {/* Reassurance strip */}
+          <div style={{display:"flex",flexWrap:"wrap",justifyContent:"center",gap:28,marginTop:36}}>
+            {["No setup fees","Cancel anytime","No contracts","Free to try"].map(t=>(
+              <div key={t} style={{display:"flex",alignItems:"center",gap:7,fontSize:13,color:C.dim}}>
+                <CheckCircle size={13} color={C.green} strokeWidth={3}/> {t}
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -837,16 +959,16 @@ export default function App(){
               <Store size={13} color="#000" strokeWidth={2.5}/>
             </div>
             <div>
-              <div style={{fontSize:14,fontWeight:700,color:C.text}}>Shift<span style={{color:C.amber}}>IQ</span></div>
+              <div style={{fontSize:14,fontWeight:700,color:C.text}}>Retail <span style={{color:C.amber}}>Intelligence</span></div>
               <div style={{fontSize:11,color:C.dim}}>Staff intelligence for independent retail</div>
             </div>
           </div>
-          <a href="mailto:hello@shiftiq.co.uk"
+          <a href="mailto:hello@retail-intelligence.co.uk"
             style={{fontSize:13,fontWeight:600,color:C.dim,textDecoration:"none",transition:"color 0.2s"}}
             onMouseEnter={e=>e.target.style.color=C.amber} onMouseLeave={e=>e.target.style.color=C.dim}>
-            hello@shiftiq.co.uk
+            hello@retail-intelligence.co.uk
           </a>
-          <div style={{fontSize:12,color:C.dim}}>© 2026 ShiftIQ · Built in the UK</div>
+          <div style={{fontSize:12,color:C.dim}}>© 2026 Retail Intelligence · Built in the UK</div>
         </div>
       </footer>
     </div>
