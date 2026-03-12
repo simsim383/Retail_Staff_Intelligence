@@ -126,7 +126,40 @@ export default function App(){
   const [scrollY,setScrollY]=useState(0);
   const [form,setForm]=useState({name:"",email:"",business:"",message:""});
   const [sent,setSent]=useState(false);
+  const [submitting,setSubmitting]=useState(false);
+  const [submitError,setSubmitError]=useState("");
   const [activeBiz,setActiveBiz]=useState(0);
+
+  // ── FORMSPREE SUBMIT ──────────────────────────────────────────────
+  // 1. Go to https://formspree.io and create a free account
+  // 2. Click "New Form" and name it "Retail Intelligence Demo Requests"
+  // 3. Replace YOUR_FORM_ID below with the ID from your Formspree endpoint
+  //    e.g. if your endpoint is https://formspree.io/f/xyzabcde → use "xyzabcde"
+  const FORMSPREE_ID = "mgonywry";
+
+  const handleSubmit = async () => {
+    if(!form.name || !form.email){ setSubmitError("Please fill in your name and email."); return; }
+    setSubmitting(true);
+    setSubmitError("");
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method:"POST",
+        headers:{"Content-Type":"application/json","Accept":"application/json"},
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          business: form.business,
+          message: form.message,
+        }),
+      });
+      if(res.ok){ setSent(true); }
+      else { setSubmitError("Something went wrong. Please try again or email us directly."); }
+    } catch(err) {
+      setSubmitError("Network error. Please check your connection and try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
 
   useEffect(()=>{
     const fn=()=>setScrollY(window.scrollY);
@@ -942,9 +975,16 @@ export default function App(){
                   value={form.message} onChange={e=>setForm(p=>({...p,message:e.target.value}))}
                   style={{width:"100%",padding:"12px 16px",borderRadius:12,border:`1.5px solid ${C.border}`,background:C.bg,color:C.text,fontSize:14,resize:"none",transition:"all 0.2s"}}/>
               </div>
-              <button onClick={()=>{if(form.name&&form.email)setSent(true);}}
-                style={{...BTNP,width:"100%",justifyContent:"center",padding:15,fontSize:15}}>
-                Send Message <ArrowRight size={15} strokeWidth={3}/>
+              {submitError&&(
+                <div style={{background:"#EF444418",border:"1px solid #EF444440",borderRadius:10,
+                  padding:"10px 14px",marginBottom:14,fontSize:13,color:"#EF4444",display:"flex",gap:8,alignItems:"center"}}>
+                  <AlertTriangle size={13}/> {submitError}
+                </div>
+              )}
+              <button onClick={handleSubmit} disabled={submitting}
+                style={{...BTNP,width:"100%",justifyContent:"center",padding:15,fontSize:15,
+                  opacity:submitting?0.7:1,cursor:submitting?"not-allowed":"pointer"}}>
+                {submitting ? "Sending…" : <><span>Send Message</span><ArrowRight size={15} strokeWidth={3}/></>}
               </button>
             </Card>
           )}
