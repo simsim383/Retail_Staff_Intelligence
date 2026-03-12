@@ -827,7 +827,7 @@ export default function App(){
                 <span style={{fontFamily:"'Playfair Display',serif",fontSize:52,fontWeight:800,color:C.text,lineHeight:1}}>£5</span>
                 <span style={{fontFamily:"'Playfair Display',serif",fontSize:28,fontWeight:800,color:C.amber,lineHeight:1,marginBottom:4}}>.99</span>
               </div>
-              <div style={{fontSize:13,color:C.dim,marginBottom:28}}>per month · single business</div>
+              <div style={{fontSize:13,color:C.dim,marginBottom:28}}>per user per month · single business</div>
               <div style={{display:"flex",flexDirection:"column",gap:11,marginBottom:32}}>
                 {[
                   {on:true, txt:"1 business"},
@@ -882,7 +882,7 @@ export default function App(){
                 <span style={{fontFamily:"'Playfair Display',serif",fontSize:52,fontWeight:800,color:C.text,lineHeight:1}}>£9</span>
                 <span style={{fontFamily:"'Playfair Display',serif",fontSize:28,fontWeight:800,color:C.amber,lineHeight:1,marginBottom:4}}>.99</span>
               </div>
-              <div style={{fontSize:13,color:C.dim,marginBottom:28}}>per month · multiple businesses</div>
+              <div style={{fontSize:13,color:C.dim,marginBottom:28}}>per user per month · multiple businesses</div>
               <div style={{display:"flex",flexDirection:"column",gap:11,marginBottom:32}}>
                 {[
                   {txt:"Everything in Basic"},
