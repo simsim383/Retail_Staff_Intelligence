@@ -893,6 +893,7 @@ export default function App(){
           </div>
           <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(2rem,4.5vw,3.2rem)",fontWeight:800,lineHeight:1.15,color:C.text,marginBottom:20}}>
             Your staff, your standards.<br/><span className="tg" style={{fontStyle:"italic"}}>Now with the data to back it up.</span>
+          </h2>
           <div style={{display:"flex",flexWrap:"wrap",justifyContent:"center",gap:12}}>
             <button onClick={()=>scrollTo("contact")} style={{...BTNP,boxShadow:`0 0 30px ${C.amber}35`}}>Request Demo <ArrowRight size={14} strokeWidth={3}/></button>
             <button onClick={()=>scrollTo("contact")} style={BTNS}>Sign Up</button>
