@@ -258,14 +258,13 @@ export default function App(){
             <span style={{fontSize:12,fontWeight:700,letterSpacing:"0.1em",textTransform:"uppercase",color:C.green}}>Built for independent retail owners</span>
           </div>
           <h1 className="fu d2" style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(2.2rem,5.5vw,4rem)",fontWeight:800,lineHeight:1.1,color:C.text,marginBottom:24}}>
-            Run your team<br/><span className="tg" style={{fontStyle:"italic"}}>smarter.</span>
+            Manage your team<br/><span className="tg" style={{fontStyle:"italic"}}>all from one app.</span>
           </h1>
           <p className="fu d3" style={{...BODY,fontSize:17,maxWidth:540,margin:"0 auto 32px"}}>
             Real-time staff task tracking, shift scheduling, and performance insights — all in one place.
-            Your team logs in. You stay in the loop.
           </p>
           <div className="fu d3" style={{display:"flex",flexWrap:"wrap",justifyContent:"center",gap:8,marginBottom:36}}>
-            {["Know what staff actually did during their shift","Spot slow or inefficient tasks instantly","Prepare payroll in seconds — no spreadsheets"].map(b=>(
+            {["Know what staff actually did during their shift","Spot slow or inefficient tasks instantly","Compare tasks between your staff memebers"].map(b=>(
               <span key={b} style={{display:"inline-flex",alignItems:"center",gap:6,fontSize:12,fontWeight:600,padding:"7px 14px",borderRadius:99,background:`${C.green}14`,color:C.green,border:`1px solid ${C.green}28`}}>
                 <CheckCircle size={11} strokeWidth={3}/> {b}
               </span>
@@ -284,7 +283,7 @@ export default function App(){
                   <div style={{display:"flex",gap:6}}>
                     {["#FF5F57","#FEBC2E","#28C840"].map(c=><div key={c} style={{width:12,height:12,borderRadius:"50%",background:c}}/>)}
                   </div>
-                  <span style={{fontSize:12,fontWeight:600,color:C.dim}}>Retail Intelligence — Owner Dashboard · Londis Horden</span>
+                  <span style={{fontSize:12,fontWeight:600,color:C.dim}}>Retail Intelligence — Owner Dashboard</span>
                 </div>
                 <div style={{display:"flex",alignItems:"center",gap:6,fontSize:11,fontWeight:700,color:C.green,background:`${C.green}15`,padding:"4px 10px",borderRadius:99}}>
                   <div style={{width:6,height:6,borderRadius:"50%",background:C.green}}/> Live
@@ -414,7 +413,7 @@ export default function App(){
           <div className="g2" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16,marginBottom:24}}>
             {[{icon:"📋",title:"Paper checklists",desc:"Tasks get missed, lost, or just not checked. No accountability. No record. No way to know what actually happened."},
               {icon:"💬",title:"WhatsApp chaos",desc:"Chasing staff on WhatsApp isn't management. It's reactive, exhausting, and leaves no proper trail."},
-              {icon:"📊",title:"Spreadsheet hell",desc:"Manually copying hours at the end of every week. Error-prone, slow, and a waste of your time."},
+              {icon:"📊",title:"Spreadsheet admin",desc:"Manually copying hours at the end of every week. Error-prone, slow, and a waste of your time."},
               {icon:"🧮",title:"Manual payroll",desc:"Counting up hours by hand. Wrong totals. Disputes. Stress you simply don't need."}
             ].map((p,i)=>(
               <Card key={i} accent={C.red} style={{padding:20}}>
@@ -427,7 +426,7 @@ export default function App(){
           <div style={{background:`${C.red}08`,border:`1px solid ${C.red}30`,borderRadius:14,padding:"16px 20px",display:"flex",flexWrap:"wrap",alignItems:"center",gap:10}}>
             <AlertTriangle size={15} color={C.red}/>
             <span style={{fontSize:13,fontWeight:700,color:C.red}}>This leads to:</span>
-            {["Missed tasks","Poor visibility","Wasted labour cost","Payroll disputes","No staff accountability"].map(t=>(
+            {["Missed tasks","Poor visibility","Wasted labour cost","No staff accountability"].map(t=>(
               <Badge key={t} color={C.red}>{t}</Badge>
             ))}
           </div>
@@ -442,7 +441,7 @@ export default function App(){
             <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(1.8rem,3.5vw,2.8rem)",fontWeight:800,lineHeight:1.15,color:C.text,marginTop:20}}>Up and running in minutes.</h2>
           </div>
           <div className="g3" style={{display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:20}}>
-            {[{n:"01",color:C.amber,title:"Add your business",desc:"Set up your store — name, sector, shift times. Done in under a minute. Add more stores anytime."},
+            {[{n:"01",color:C.amber,title:"Add your business",desc:"Set up your store — name, sector, shift times. Done in under 5 minutes. Add more stores anytime."},
               {n:"02",color:C.blue, title:"Add your staff",desc:"Create a profile for each team member. Assign their PIN. Set shift times and days per person."},
               {n:"03",color:C.purple,title:"Build their task lists",desc:"Customise each staff member's daily to-do list. Add, remove, and reorder tasks at any time."},
               {n:"04",color:C.green,title:"Stay in the loop",desc:"Staff log their day via PIN login. You get live insights, alerts, and performance data — without asking."},
@@ -776,34 +775,6 @@ export default function App(){
         </div>
       </div>
 
-      {/* ── FOUNDER / WHY ── */}
-      <div style={{background:C.surface,borderTop:`1px solid ${C.border}`,borderBottom:`1px solid ${C.border}`,padding:"72px 20px"}}>
-        <div style={{maxWidth:700,margin:"0 auto",textAlign:"center"}}>
-          <Badge color={C.green}>Why We Built This</Badge>
-          <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(1.8rem,3.5vw,2.8rem)",fontWeight:800,lineHeight:1.15,color:C.text,fontStyle:"italic",margin:"24px 0 20px"}}>
-            "Most shop owners have no idea<br/>what actually happens during a shift."
-          </h2>
-          <p style={{...BODY,marginBottom:16}}>Small retail stores are often running on trust, habit, and hope. Owners rely on word of mouth and memory to understand how their store is operating. When something goes wrong — a task missed, hours disputed, a customer complaint — there's no record.</p>
-          <p style={{...BODY,marginBottom:24}}>Retail Intelligence was built to change that. Not with complex, expensive enterprise software — but with a simple, practical tool that gives store owners the visibility they deserve.</p>
-          <div style={{background:C.card,border:`1px solid ${C.border}`,borderRadius:16,padding:"18px 20px",marginBottom:24,textAlign:"left"}}>
-            <div style={{fontSize:11,fontWeight:800,letterSpacing:"0.1em",textTransform:"uppercase",color:C.dim,marginBottom:10}}>Built around real store workflows</div>
-            <p style={{fontSize:13,color:C.muted,lineHeight:1.7,marginBottom:12}}>Retail Intelligence was designed around the actual daily tasks of real convenience stores — not invented in a boardroom. The task lists, categories, and shift structures reflect what real shop staff do every day.</p>
-            <div style={{display:"flex",flexWrap:"wrap",gap:6}}>
-              {["Till lifts","Fridge date checks","Newspaper returns","Stock rotation","Post office duties","Opening & closing","Grocery stacking","Cleaning tasks"].map(t=>(
-                <span key={t} style={{fontSize:11,fontWeight:700,padding:"4px 10px",borderRadius:99,background:`${C.amber}14`,color:C.amber,border:`1px solid ${C.amber}25`}}>{t}</span>
-              ))}
-            </div>
-          </div>
-          <div style={{display:"inline-flex",alignItems:"center",gap:12,marginTop:28,background:C.card,border:`1px solid ${C.border}`,borderRadius:14,padding:"12px 18px"}}>
-            <div style={{width:34,height:34,borderRadius:"50%",background:`linear-gradient(135deg,${C.amber},#f97316)`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,fontWeight:800,color:"#000"}}>RI</div>
-            <div style={{textAlign:"left"}}>
-              <div style={{fontSize:13,fontWeight:800,color:C.text}}>Retail Intelligence</div>
-              <div style={{fontSize:11,color:C.dim}}>Built in the UK for UK retailers</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* ── PRICING ── */}
       <div id="pricing" style={{padding:"88px 20px",background:C.bg}}>
         <div style={{maxWidth:1100,margin:"0 auto"}}>
@@ -913,15 +884,6 @@ export default function App(){
               </button>
             </div>
           </div>
-
-          {/* Reassurance strip */}
-          <div style={{display:"flex",flexWrap:"wrap",justifyContent:"center",gap:28,marginTop:36}}>
-            {["No setup fees","Cancel anytime","No contracts","Free to try"].map(t=>(
-              <div key={t} style={{display:"flex",alignItems:"center",gap:7,fontSize:13,color:C.dim}}>
-                <CheckCircle size={13} color={C.green} strokeWidth={3}/> {t}
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 
@@ -932,12 +894,10 @@ export default function App(){
             {[...Array(5)].map((_,i)=><Star key={i} size={16} fill={C.amber} color={C.amber}/>)}
           </div>
           <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(2rem,4.5vw,3.2rem)",fontWeight:800,lineHeight:1.15,color:C.text,marginBottom:20}}>
-            Ready to take control<br/><span className="tg" style={{fontStyle:"italic"}}>of your team?</span>
-          </h2>
-          <p style={{...BODY,maxWidth:440,margin:"0 auto 32px"}}>Join retail owners who've stopped guessing and started knowing. Set up in minutes. No contracts.</p>
+            Your staff, your standards.<br/><span className="tg" style={{fontStyle:"italic"}}>Now with the data to back it up.</span>
           <div style={{display:"flex",flexWrap:"wrap",justifyContent:"center",gap:12}}>
             <button onClick={()=>scrollTo("contact")} style={{...BTNP,boxShadow:`0 0 30px ${C.amber}35`}}>Request Demo <ArrowRight size={14} strokeWidth={3}/></button>
-            <button onClick={()=>scrollTo("contact")} style={BTNS}>Get Early Access</button>
+            <button onClick={()=>scrollTo("contact")} style={BTNS}>Sign Up</button>
           </div>
         </div>
       </div>
@@ -1003,7 +963,7 @@ export default function App(){
               <div style={{fontSize:11,color:C.dim}}>Staff intelligence for independent retail</div>
             </div>
           </div>
-          <a href="mailto:hello@retail-intelligence.co.uk"
+          <a href="mailto:retail.intelligence@outlook.com"
             style={{fontSize:13,fontWeight:600,color:C.dim,textDecoration:"none",transition:"color 0.2s"}}
             onMouseEnter={e=>e.target.style.color=C.amber} onMouseLeave={e=>e.target.style.color=C.dim}>
             hello@retail-intelligence.co.uk
