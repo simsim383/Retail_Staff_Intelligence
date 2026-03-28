@@ -178,8 +178,8 @@ export default function App(){
   ];
 
   const businesses=[
-    {name:"Londis Horden",type:"Convenience Store",hrs:"57h",tasks:18,staffIn:"3/3",color:C.amber},
-    {name:"Londis Seaham",type:"Convenience Store",hrs:"43h",tasks:14,staffIn:"2/4",color:C.blue},
+    {name:"Premier Leeds",type:"Convenience Store",hrs:"57h",tasks:18,staffIn:"3/3",color:C.amber},
+    {name:"Premier Newcastle",type:"Convenience Store",hrs:"43h",tasks:14,staffIn:"2/4",color:C.blue},
   ];
 
   return(
@@ -262,7 +262,7 @@ export default function App(){
             Shift reports, hours tracking, and task updates — all handled automatically. Set up in minutes. No contracts.
           </p>
           <div className="fu d3" style={{display:"flex",flexWrap:"wrap",justifyContent:"center",gap:8,marginBottom:36}}>
-            {["Know what staff actually did during their shift","Spot slow or inefficient tasks instantly","Compare tasks between your staff memebers"].map(b=>(
+            {["Know what staff actually did during their shift","Spot slow or inefficient tasks instantly","Compare tasks between your staff members"].map(b=>(
               <span key={b} style={{display:"inline-flex",alignItems:"center",gap:6,fontSize:12,fontWeight:600,padding:"7px 14px",borderRadius:99,background:`${C.green}14`,color:C.green,border:`1px solid ${C.green}28`}}>
                 <CheckCircle size={11} strokeWidth={3}/> {b}
               </span>
@@ -591,7 +591,7 @@ export default function App(){
               <PhoneMock title="Retail Intelligence" subtitle="Sign In">
                 <div style={{textAlign:"center",padding:"8px 0 12px"}}>
                   <div style={{fontFamily:"'Playfair Display',serif",fontSize:14,fontWeight:700,color:C.text,marginBottom:4}}>Enter your PIN</div>
-                  <div style={{fontSize:11,color:C.dim,marginBottom:14}}>Londis Horden</div>
+                  <div style={{fontSize:11,color:C.dim,marginBottom:14}}>Premier</div>
                   {/* Dots */}
                   <div style={{display:"flex",gap:10,justifyContent:"center",marginBottom:16}}>
                     {[true,true,true,false].map((filled,i)=>(
@@ -676,8 +676,8 @@ export default function App(){
             </div>
             <div className="g2" style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:16}}>
               {[
-                {name:"Londis Horden",color:C.amber,metrics:[{l:"Avg task time",v:"110m",c:C.amber},{l:"Hours / week",v:"57h",c:C.text},{l:"Submission rate",v:"Pending",c:C.red},{l:"Tasks completed",v:"18",c:C.text}]},
-                {name:"Londis Seaham",color:C.blue, metrics:[{l:"Avg task time",v:"88m",c:C.green},{l:"Hours / week",v:"43h",c:C.text},{l:"Submission rate",v:"75%",c:C.green},{l:"Tasks completed",v:"14",c:C.text}]},
+                {name:"Premier Leeds",color:C.amber,metrics:[{l:"Avg task time",v:"110m",c:C.amber},{l:"Hours / week",v:"57h",c:C.text},{l:"Submission rate",v:"Pending",c:C.red},{l:"Tasks completed",v:"18",c:C.text}]},
+                {name:"Premier Newcastle",color:C.blue, metrics:[{l:"Avg task time",v:"88m",c:C.green},{l:"Hours / week",v:"43h",c:C.text},{l:"Submission rate",v:"75%",c:C.green},{l:"Tasks completed",v:"14",c:C.text}]},
               ].map((biz,i)=>(
                 <div key={i} style={{background:C.bg,border:`1px solid ${C.border}`,borderRadius:14,overflow:"hidden"}}>
                   <div style={{background:C.surface,padding:"10px 16px",borderBottom:`1px solid ${C.border}`,
@@ -919,7 +919,7 @@ export default function App(){
             <Card accent={C.amber} style={{padding:32}}>
               {[{key:"name",label:"Your Name",type:"text",ph:"Jane Smith"},
                 {key:"email",label:"Email Address",type:"email",ph:"jane@mystore.co.uk"},
-                {key:"business",label:"Business Name",type:"text",ph:"Londis Horden"}
+                {key:"business",label:"Business Name",type:"text",ph:"Premier Leeds"}
               ].map(f=>(
                 <div key={f.key} style={{marginBottom:16}}>
                   <label style={{...LBL,display:"block",marginBottom:8}}>{f.label}</label>
