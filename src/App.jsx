@@ -225,8 +225,7 @@ export default function App(){
             ))}
           </div>
           <div className="hm" style={{display:"flex",gap:10}}>
-            <button onClick={()=>scrollTo("contact")} style={{...BTNS,padding:"9px 18px",fontSize:13}}>Request Demo</button>
-            <button onClick={()=>scrollTo("contact")} style={{...BTNP,padding:"9px 18px",fontSize:13}}>Get Early Access <ArrowRight size={13} strokeWidth={3}/></button>
+            <button onClick={()=>scrollTo("contact")} style={{...BTNP,padding:"9px 18px",fontSize:13}}>Sign Up <ArrowRight size={13} strokeWidth={3}/></button>
           </div>
           <button className="sm" onClick={()=>setMenuOpen(v=>!v)}
             style={{display:"none",background:"none",border:"none",color:C.muted,cursor:"pointer",padding:4}}>
@@ -241,7 +240,7 @@ export default function App(){
                 {l.label}
               </button>
             ))}
-            <button onClick={()=>scrollTo("contact")} style={{...BTNP,width:"100%",justifyContent:"center",marginTop:14}}>Get Early Access</button>
+            <button onClick={()=>scrollTo("contact")} style={{...BTNP,width:"100%",justifyContent:"center",marginTop:14}}>Sign Up</button>
           </div>
         )}
       </nav>
@@ -269,7 +268,7 @@ export default function App(){
             ))}
           </div>
           <div className="fu d4" style={{display:"flex",flexWrap:"wrap",justifyContent:"center",gap:12,marginBottom:64}}>
-            <button onClick={()=>scrollTo("contact")} style={{...BTNP,boxShadow:`0 0 30px ${C.amber}35`}}>Request a Demo <ArrowRight size={14} strokeWidth={3}/></button>
+            <button onClick={()=>scrollTo("contact")} style={{...BTNP,boxShadow:`0 0 30px ${C.amber}35`}}>Sign Up <ArrowRight size={14} strokeWidth={3}/></button>
             <button onClick={()=>scrollTo("owner")} style={BTNS}><Eye size={14}/> See It In Action</button>
           </div>
 
@@ -895,8 +894,7 @@ export default function App(){
             Your staff, your standards.<br/><span className="tg" style={{fontStyle:"italic"}}>Now with the data to back it up.</span>
           </h2>
           <div style={{display:"flex",flexWrap:"wrap",justifyContent:"center",gap:12}}>
-            <button onClick={()=>scrollTo("contact")} style={{...BTNP,boxShadow:`0 0 30px ${C.amber}35`}}>Request Demo <ArrowRight size={14} strokeWidth={3}/></button>
-            <button onClick={()=>scrollTo("contact")} style={BTNS}>Sign Up</button>
+            <button onClick={()=>scrollTo("contact")} style={{...BTNP,boxShadow:`0 0 30px ${C.amber}35`}}>Sign Up <ArrowRight size={14} strokeWidth={3}/></button>
           </div>
         </div>
       </div>
@@ -907,7 +905,7 @@ export default function App(){
           <div style={{textAlign:"center",marginBottom:36}}>
             <Badge color={C.amber}>Get In Touch</Badge>
             <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:"clamp(1.8rem,3.5vw,2.8rem)",fontWeight:800,lineHeight:1.15,color:C.text,margin:"20px 0 12px"}}>Let's talk about<br/>your store.</h2>
-            <p style={BODY}>Request a demo or ask anything. We reply within 24 hours.</p>
+            <p style={BODY}>Sign up or ask anything. We reply within 24 hours.</p>
           </div>
           {sent?(
             <Card accent={C.green} style={{textAlign:"center",padding:48,borderColor:`${C.green}40`}}>
